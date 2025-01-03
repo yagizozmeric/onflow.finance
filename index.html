@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnFlow Finance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* OnFlow Finance Yazısı */
+        .onflow-title {
+            font-size: 2rem; /* Normal boyuta getirildi */
+            font-weight: bold;
+            color: #DAA520; /* Sarı renk */
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Animasyon ve Etkileşimler */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Karanlık Mod */
+        body.dark-mode {
+            background-color: #121212;
+            color: #E0E0E0;
+        }
+
+        .dark-mode .onflow-title {
+            color: #FFD700;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #DAA520;
+            color: #1E1E2F;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Footer Logo Alignment */
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            background-color: #1E1E2F;
+        }
+
+        .footer-logo img {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Karanlık Mod Butonu -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav fade-in">
+        <div class="left-nav">
+            <span class="onflow-title">OnFlow Finance</span>
+            <a href="https://onflowfinance.medium.com/" target="_blank">Blog</a>
+            <a href="#docs">Docs</a>
+        </div>
+        <div class="right-nav">
+            <a href="#launch" class="launch-btn">Launch App</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero fade-in">
+        <div class="hero-content">
+            <h1>Tokenize your receivable, enhance your cashflow!</h1>
+            <p>Leverage the power of DeFi for innovative financial solutions.</p>
+            <a href="#solutions" class="btn">Explore Solutions</a>
+        </div>
+        <div class="flow-light">
+            <div class="light-effect"></div>
+        </div>
+    </header>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions fade-in">
+        <h2>Solutions</h2>
+        <div class="service-container">
+            <div class="service-item">
+                <h3>Receivable Financing</h3>
+                <p>Unlock the cash value of your receivables quickly and efficiently, enabling smoother business operations.</p>
+            </div>
+            <div class="service-item">
+                <h3>Multilateral Netting</h3>
+                <p>Streamline complex transactions by consolidating payments between multiple parties into a single net settlement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Insights Section -->
+    <section id="insights" class="insights fade-in">
+        <h2>Dynamic Insights</h2>
+        <div class="insights-grid">
+            <div class="insight-card">
+                <h3>Total Transactions</h3>
+                <p class="insight-data">125,643</p>
+                <p class="insight-desc">Blockchain-secured transactions completed.</p>
+            </div>
+            <div class="insight-card">
+                <h3>Liquidity Provided</h3>
+                <p class="insight-data">$2.8M</p>
+                <p class="insight-desc">Liquidity unlocked for businesses.</p>
+            </div>
+            <div class="insight-card">
+                <h3>Active Users</h3>
+                <p class="insight-data">24,321</p>
+                <p class="insight-desc">Users leveraging OnFlow Finance.</p>
+            </div>
+            <div class="insight-card">
+                <h3>Vault Returns</h3>
+                <p class="insight-data">14.5%</p>
+                <p class="insight-desc">Average annual return from our vaults.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter fade-in">
+        <div class="newsletter-container">
+            <h3>Stay ahead, don’t miss the future of finance.</h3>
+            <form action="https://your-typeform-link.com" method="GET" class="newsletter-form" target="_blank">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Disclaimer Section -->
+    <section id="disclaimer" class="disclaimer fade-in">
+        <p>
+            OnFlow Finance is a technology services provider. Use of the OnFlow Finance Protocol involves risks, including but not limited to, the potential loss of digital assets. Before using the OnFlow Finance Protocol, you should review our Platform Terms to ensure you understand how the Protocol works. As described in our Terms, the OnFlow Finance Protocol is provided on an “as is” and “as available” basis, at your own risk. We explicitly disclaim any representation or warranties of any kind relating to the Protocol, and no developer or entity will be liable for claims or damages of any kind associated with use or inability to use the Protocol.
+        </p>
+    </section>
+
+    <!-- Footer Section with Logo -->
+    <footer class="footer-logo fade-in">
+        <img src="images/Onflow Finance Logo.png" alt="OnFlow Finance Logo">
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

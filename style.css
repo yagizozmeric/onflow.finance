@@ -1,0 +1,296 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #1E1E2F; /* Lacivert arka plan */
+    color: #E0E0E0; /* Açık gri metin */
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #1E1E2F, #2C2C3E);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 40px; /* Logo boyutu */
+    margin-right: 15px;
+}
+
+.left-nav a {
+    color: #DAA520; /* Koyu altın sarısı */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.left-nav a:hover {
+    color: #FFFFFF;
+}
+
+.right-nav .launch-btn {
+    background: #DAA520;
+    color: #1E1E2F;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.right-nav .launch-btn:hover {
+    background: #C19A3B;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1E1E2F, #4A4A4A);
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    overflow: hidden;
+    color: #DAA520; /* Koyu altın sarısı */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #E0E0E0; /* Açık gri metin */
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background: #DAA520;
+    color: #1E1E2F;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #C19A3B;
+}
+
+.hero-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Işık Efekti */
+.flow-light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.light-effect {
+    width: 400px;
+    height: 200px;
+    background: radial-gradient(circle, #DAA520, #1E1E2F);
+    animation: glow 4s infinite ease-in-out;
+    filter: blur(100px);
+}
+
+@keyframes glow {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Solutions Section */
+.solutions {
+    background: linear-gradient(135deg, #1E1E2F, #4A4A4A);
+    color: #DAA520; /* Koyu altın sarısı */
+    padding: 60px 20px;
+}
+
+.solutions h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #333333, #444444);
+    color: #E0E0E0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-item h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #DAA520;
+}
+
+.service-item p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #D3D3D3;
+}
+
+/* Dynamic Insights Section */
+.insights {
+    background: linear-gradient(135deg, #2C2C3E, #1E1E2F);
+    color: #DAA520; /* Koyu altın sarısı metin */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.insights h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.insight-card {
+    background: linear-gradient(135deg, #333333, #444444);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.insight-card h3 {
+    font-size: 1.5rem;
+    color: #DAA520; /* Koyu altın sarısı */
+    margin-bottom: 15px;
+}
+
+.insight-data {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.insight-desc {
+    font-size: 1rem;
+    color: #E0E0E0;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: linear-gradient(135deg, #DAA520, #1E1E2F);
+    color: #1E1E2F;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.newsletter-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #1E1E2F;
+}
+
+.newsletter-form button {
+    background-color: #DAA520;
+    color: #1E1E2F;
+}
+
+/* Disclaimer Section */
+.disclaimer {
+    background: #2C2C3E;
+    color: #FFFFFF; /* Beyaz yazı rengi */
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: #1E1E2F;
+    color: #E0E0E0;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.faq a {
+    color: #DAA520;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.faq a:hover {
+    color: #FFFFFF;
+}
